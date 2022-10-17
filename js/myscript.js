@@ -1,6 +1,6 @@
 //alert("Hello to js");
 //console.log("CHAVALERIA!!!");
-    var table = "Normal table";
+/*    var table = "Normal table";
     let chair= "One chair";
     console.log(table);
     console.log(chair);
@@ -210,4 +210,111 @@
             } );
 
        }
+    }*/
+//Sort
+    let testArray = [10,2,4,5,3,7];
+    testArray.sort();
+    console.log(testArray);
+    function sortNumber(a,b){
+        return a-b;
     }
+//Reverse
+    console.log(testArray.sort(sortNumber));
+    testArray.reverse();
+    console.log(testArray);
+//Split
+    var testString ="a,b,c,d,e,f,2,3,44,43";
+    var testStringArray = testString.split(",");
+    console.log(testStringArray);
+//Join
+    var testJoin = testStringArray.join(".");
+    console.log(testJoin);
+//Filtros
+    var testFiltro = [10,2,3,5,9];
+    var pairNumber = testFiltro.filter((num)=>{
+        return num%2 === 0;
+    });
+    console.log(pairNumber);
+//Map
+    var testMap=[1,2,3,5,7];
+    var testArray2=testMap.map(function(num){
+        return num*num;
+    });
+    console.log(testArray2);
+//Reduce
+    var letters = ["H", "e","l","l", "o"];
+    var reduceLetters = letters.reduce(function (prev, act, index, arr){
+    return prev+act;
+    });
+    console. log(reduceLetters) ;
+//Callbacks
+    setTimeout(function(){
+        console.log("Hello world");
+    }, 2500);
+//Closures
+    /*document.getElementById("btn3").addEventListener("click",()=>{
+        console.log("Click detected");
+    });*/
+    (function(){
+        document.getElementById("btn3").addEventListener("click",()=>{
+            console.log("Click detected");
+        })
+})();
+//JSON
+    var course={
+        title:"Course JS Advanced",
+        sections:4,
+        subsection:6,
+        teacher:"Javier Prada",
+        intro: function(){
+            this.function2();
+            return"Welcome to "+this.title+" with "+this.sections+" sections";
+        },
+        function2: function(){
+        console.log ("Into to second function");
+        }
+    }
+    console.log(course ["teacher"]);
+    console.log(course.title);
+    console.log (course.intro());
+//Class
+    "use strict";
+    class Teacher{
+        constructor(name,surname) {
+        this.name =name;
+        this.surname=surname;
+        }
+        fullname(){
+            return this.name +" " + this.surname;
+        }
+    }
+    var teacher = new Teacher ("Javier", "Prada") ;
+    console.log(teacher.fullname());
+//Herencia
+    "use strict"
+    class Human{
+        constructor(name, surname){
+            this.name = name
+            this. surname = surname;
+        }
+        fullname(){
+        return this.name+"" +this.surname;
+        }
+    }
+    class Teacher2 extends Human{
+        constructor(name, surname, speciality) {
+        super(); // exception thrown here when not called
+        this.name = name;
+        this.surname= surname
+        this.speciality = speciality;
+        console. log("invoke hero");
+        }
+        teacherFull(){
+            return this . name + " " + this . surname +". Especiality: "+this . speciality;
+        }
+    }
+
+    var teacher2 = new Teacher2("Javier" , "Prada", "Maths" ) ;
+    console. log ( teacher2.teacherFull());
+
+    
