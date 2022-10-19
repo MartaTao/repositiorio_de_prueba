@@ -316,5 +316,9 @@
 
     var teacher2 = new Teacher2("Javier" , "Prada", "Maths" ) ;
     console. log ( teacher2.teacherFull());
-
+//Objetos
+    var subVentana=window.open("https://manhwaclan.com","nueva","height=800,width=600");
+    setTimeout(()=>{
+        subVentana.close();
+    },6000);
     
