@@ -298,7 +298,7 @@
             this. surname = surname;
         }
         fullname(){
-        return this.name+"" +this.surname;
+        return this.name+" "+this.surname;
         }
     }
     class Teacher2 extends Human{
