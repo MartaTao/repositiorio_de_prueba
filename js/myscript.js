@@ -210,7 +210,7 @@
             } );
 
        }
-    }*/
+    }
 //Sort
     let testArray = [10,2,4,5,3,7];
     testArray.sort();
@@ -252,9 +252,9 @@
         console.log("Hello world");
     }, 2500);
 //Closures
-    /*document.getElementById("btn3").addEventListener("click",()=>{
+    document.getElementById("btn3").addEventListener("click",()=>{
         console.log("Click detected");
-    });*/
+    });
     (function(){
         document.getElementById("btn3").addEventListener("click",()=>{
             console.log("Click detected");
@@ -277,6 +277,7 @@
     console.log(course ["teacher"]);
     console.log(course.title);
     console.log (course.intro());
+*/
 //Class
     "use strict";
     class Teacher{

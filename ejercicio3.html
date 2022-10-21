@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo navigator</title>
+</head>
+<body>
+    Enter your name: <input	type="text"	id="nombre"	onblur="obTxtNombre()"><br>
+    Enter your name: <input type="text" id="fname" onchange="myFunction()"><br>
+    Enter your name: <input type="text" onfocus="myFunction(this)" onblur="descolorar(this)"><br>
+    
+    <script>
+        function obTxtNombre(){
+            var	x	=	document.getElementById("nombre");
+            x.value	=	x.value.toUpperCase();
+        }
+        function myFunction() {
+            var x = document.getElementById("fname");
+            x.value = x.value.toUpperCase();
+        }
+        function myFunction(x) {
+            x.style.background = "yellow";
+        }
+        function descolorar(x){
+            x.style.background = "white";
+        }
+        /*document.write("Location <b>href</b>: " + location.href + "<br>");
+        document.write("Location <b>host</b>: " + location.host + "<br>");
+        document.write("Location <b>hostname</b>: " + location.hostname + "<br>");
+        document.write("Location <b>pathname</b>: " + location.pathname + "<br>");
+        document.write("Location <b>port</b>: " + location.port + "<br>");
+        document.write("Location <b>protocol</b>: " + location.protocol + "<br>");
+        document.write("navigator <b>appCodeName</b>: " + navigator.appCodeName + "<br>");
+        document.write("navigator <b>appName</b>: " + navigator.appName + "<br>");
+        document.write("navigator <b>appVersion</b>: " + navigator.appVersion + "<br>");
+        document.write("navigator <b>cookieEnabled</b>: " + navigator.cookieEnabled + "<br>");
+        document.write("navigator <b>platform</b>: " + navigator.platform + "<br>");
+        document.write("navigator <b>userAgent</b>: " + navigator.userAgent + "<br>");*/
+    </script>
+</body>
+</html>
