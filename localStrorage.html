@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+        localStorage.setItem('usuario','Nii-san');
+        var value = localStorage.getItem('usuario');
+        console.log(value);
+        console.log(localStorage.length);
+        localStorage.removeItem('usuario');
+        console.log(localStorage.length);
+        // Creamos un objeto
+        var object = { 'uno' : '1', 'dos' : '2', 'nombre': 'daniel' };
+        // Lo guardamos en localStorage, pasándolo a cadena con JSON
+        localStorage.setItem('key', JSON.stringify(object));
+        // Creamos una nueva variable object2 con el valor obtenido de localStorage usando JSON recuperar el objeto inicial
+        var object2 = JSON.parse(localStorage.getItem('key'));
+        console.log(object2.uno); // La console.log  mostrará 1 por pantalla
+        console.log(object2.dos); // La console.log  mostrará 2 por pantalla
+        console.log(object2.nombre); // La console.log mostrará ‘daniel’ por pantalla
+   </script> 
+</body>
+</html>
